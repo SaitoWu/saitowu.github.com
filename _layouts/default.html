@@ -7,11 +7,10 @@
    /_/
 
 -->
-<meta charset=utf-8>
 <meta name=viewport content="width=device-width, initial-scale=1.0">
 
 <link rel=alternate href=/feed/ type=application/atom+xml>
-<link rel=stylesheet href={{ site.css-path }}/a.css>
+<link rel=stylesheet href={{ site.css-path }}/a.min.css>
 <link rel=dns-prefetch href={{ site.file }}>
 
 <title>{% if page.title != 'Sparanoid' %}{{ site.name }} - {% endif %}{{ page.title }}</title>
@@ -33,7 +32,7 @@
 		<li{% if page.permalink == '/work/' or page.category == 'work' %} class=current{% endif %}><a href=/work/>Work ／ ワークス ／ 作品</a></li>
 		<li{% if page.permalink == '/note/' or page.category == 'note' %} class=current{% endif %}><a href=/note/>Note ／ ノート ／ 筆記</a></li>
 		<li{% if page.permalink == '/about/' or page.category == 'about' %} class=current{% endif %}><a href=/about/>About ／ について ／ 關於</a></li>
-		<li><a href=/start/>Start Page ／ スタートページ ／ 起始頁</a></li>
+		<li><a href=/start/>Start ／ スタート ／ 起始頁</a></li>
 	</ul>
 </nav>
 
@@ -44,19 +43,19 @@
 {% if page.next.url %}
 	<p><a href={{ page.next.url }}/>{{ page.next.title }}</a> |
 {% else %}
-	<p>Previous |
+	<p>You're viewing the latest post |
 {% endif %}
 {% if page.previous.url %}
-	<a href={{ page.previous.url }}/>{{ page.previous.title }}</a> &gt;</p>
+	Previous: <a href={{ page.previous.url }}/>{{ page.previous.title }}</a> &gt;</p>
 {% else %}
-	Next</p>
+	You're reading my first post</p>
 {% endif %}
 </nav>
 {% endif %}
 
 {% if page.title != 'Sparanoid' %}
 <aside>
-<h2>Our Sponsor</h2>
+<h2><a href="http://www.yoggrt.com/">Ads by Yoggrt</a></h2>
 {% include sponsor.html %}
 </aside>
 {% endif %}
