@@ -58,6 +58,17 @@ header, nav, hgroup, article, aside, footer {
 	padding-bottom: 50px;
 }
 
+nav ul {
+	list-style: none;
+}
+	nav ul li {
+		display: inline-block;
+		margin-right: 12%;
+	}
+		nav ul li:last-child {
+			margin-right: 0;
+		}
+
 h1 {
 	position: relative;
 	font-weight: 100;
@@ -199,16 +210,6 @@ article .download {
 				opacity: 1;
 			}
 
-.gap {
-	list-style: none;
-	-webkit-column-width: 225px;
-	-webkit-column-gap: 20px;
-	-moz-column-width: 225px;
-	-moz-column-gap: 20px;
-	column-width: 225px;
-	column-gap: 20px;
-}
-
 .current a {
 	border-bottom: 1px dotted rgba(0, 0, 0, .3);
 }
@@ -334,6 +335,10 @@ screen and (max-device-width: 480px),
 			height: 200px;
 			border: 36px rgba(0, 0, 0, .05) solid;
 		}
+	nav ul li {
+		display: block;
+		margin-right: 0;
+	}
 	.bsa_it_i {
 		display: block;
 	}
