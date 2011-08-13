@@ -5,4 +5,4 @@ permalink: /error/
 bg: '#fcc'
 ---
 
-<p>NOT FOUND, NO KIDDING. <a href=/>GO HOME</a></p>
+<p>NOT FOUND, NO KIDDING. <a href={% if site.prod %}//{{ site.url }}{% endif %}/>GO HOME</a></p>

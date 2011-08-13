@@ -9,16 +9,16 @@
 -->
 <meta name=viewport content="width=device-width, initial-scale=1.0">
 
-<link rel=alternate href=/feed/ type=application/atom+xml>
-<link rel=stylesheet href={{ site.css-path }}/a.min.css>
+<link rel=alternate href={% if site.prod %}//{{ site.url }}{% endif %}/feed/ type=application/atom+xml>
+<link rel=stylesheet href={% if site.prod %}//{{ site.url }}{% endif %}/{{ site.css-path }}/a.min.css>
 <link rel=dns-prefetch href={{ site.file }}>
 
 <title>{% if page.title != 'Sparanoid' %}{{ site.name }} - {% endif %}{{ page.title }}</title>
 
 {% if page.title == 'Sparanoid' %}
 <header>
-	<h2>Welcome to <a href=/>Sparanoid</a></h2>
-	<h1 lang=ja><a href=/ rel=home accesskey=x>スパラノイドにようこそ</a></h1>
+	<h2>Welcome to <a href={% if site.prod %}//{{ site.url }}{% endif %}/>Sparanoid</a></h2>
+	<h1 lang=ja><a href={% if site.prod %}//{{ site.url }}{% endif %}/ rel=home accesskey=x>スパラノイドにようこそ</a></h1>
 </header>
 {% endif %}
 
@@ -26,12 +26,12 @@
 	{% if page.title == 'Sparanoid' %}
 		<h2>Get Started Here</h2>
 	{% else %}
-		<h2>&lt; <a href="/" rel=home accesskey=x>Back to Home</a></h2>
+		<h2>&lt; <a href={% if site.prod %}//{{ site.url }}{% endif %}/ rel=home accesskey=x>Back to Home</a></h2>
 	{% endif %}
 	<ul>
-		<li{% if page.permalink == '/work/' or page.category == 'work' %} class=current{% endif %}><a href=/work/>Work ／ ワークス ／ 作品</a></li>
-		<li{% if page.permalink == '/note/' or page.category == 'note' %} class=current{% endif %}><a href=/note/>Note ／ ノート ／ 筆記</a></li>
-		<li{% if page.permalink == '/about/' or page.category == 'about' %} class=current{% endif %}><a href=/about/>About ／ について ／ 關於</a></li>
+		<li{% if page.permalink == '/work/' or page.category == 'work' %} class=current{% endif %}><a href={% if site.prod %}//{{ site.url }}{% endif %}/work/>Work ／ ワークス ／ 作品</a></li>
+		<li{% if page.permalink == '/note/' or page.category == 'note' %} class=current{% endif %}><a href={% if site.prod %}//{{ site.url }}{% endif %}/note/>Note ／ ノート ／ 筆記</a></li>
+		<li{% if page.permalink == '/about/' or page.category == 'about' %} class=current{% endif %}><a href={% if site.prod %}//{{ site.url }}{% endif %}/about/>About ／ について ／ 關於</a></li>
 	</ul>
 </nav>
 
@@ -40,12 +40,12 @@
 {% if page.category == "work" or page.category == "note" %} 
 <nav>
 {% if page.next.url %}
-	<p><a href={{ page.next.url }}/>{{ page.next.title }}</a> |
+	<p><a href={% if site.prod %}//{{ site.url }}{% endif %}{{ page.next.url }}/>{{ page.next.title }}</a> |
 {% else %}
 	<p>You're viewing the latest post |
 {% endif %}
 {% if page.previous.url %}
-	Previous: <a href={{ page.previous.url }}/>{{ page.previous.title }}</a> &gt;</p>
+	Previous: <a href={% if site.prod %}//{{ site.url }}{% endif %}{{ page.previous.url }}/>{{ page.previous.title }}</a> &gt;</p>
 {% else %}
 	You're reading my first post</p>
 {% endif %}
