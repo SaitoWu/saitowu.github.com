@@ -1,0 +1,18 @@
+---
+---
+
+/* TEAM */
+	God: Tunghsiao Liu
+	Contact: info@sparanoid.com
+	Twitter: @tunghsiao
+	From: Shanghai, China
+
+/* THANKS */
+	Lindsay Wu
+
+/* SITE */
+	Last update: {{ site.time | date: "%Y/%m/%d" }}
+	Language: English / Chinese / Japanese
+	Software: Textmate
+
+/* humanstxt.org */
