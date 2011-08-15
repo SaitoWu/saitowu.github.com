@@ -10,7 +10,7 @@
 <meta name=viewport content="width=device-width, initial-scale=1.0">
 
 <link rel=alternate href={% if site.prod %}//{{ site.url }}{% endif %}/feed/ type=application/atom+xml>
-<link rel=stylesheet href={% if site.prod %}//{{ site.url }}{% endif %}/{{ site.css-path }}/a.min.css>
+<link rel=stylesheet href={% if site.prod %}//{{ site.url }}{% endif %}{{ site.css-path }}/a.min.css>
 <link rel=dns-prefetch href={{ site.file }}>
 
 <title>{% if page.title != 'Sparanoid' %}{{ site.name }} - {% endif %}{{ page.title }}</title>
