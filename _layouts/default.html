@@ -22,7 +22,7 @@
 </header>
 {% endif %}
 
-<nav>
+<nav {% if page.title != 'Sparanoid' %}class=grey{% endif %}>
 	{% if page.title == 'Sparanoid' %}
 		<h2>Get Started Here</h2>
 	{% else %}
