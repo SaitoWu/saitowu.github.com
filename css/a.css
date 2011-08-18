@@ -68,12 +68,6 @@ nav ul {
 		nav ul li:last-child {
 			margin-right: 0;
 		}
-	nav.grey a {
-		color: rgba(0, 0, 0, .5);
-	}
-		nav.grey:hover a {
-			color: #000;
-		}
 
 h1 {
 	position: relative;
