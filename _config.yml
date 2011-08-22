@@ -9,9 +9,9 @@ markdown: rdiscount
 # site url
 url: sparanoid.com
 
-# Focus domain name to site.url, used for production only
-prod: true
-#prod: false
+# Focus domain name to site.url, used for CloudFront production only
+# prod: true
+prod: false
 
 # used by images inserted in posts
 file: http://rsrc.sparanoid.com
