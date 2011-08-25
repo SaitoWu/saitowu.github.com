@@ -2,17 +2,18 @@
 ---
 
 /* TEAM */
-	God: Tunghsiao Liu
-	Contact: info@sparanoid.com
-	Twitter: @tunghsiao
-	From: Shanghai, China
+	God: Saito Wu
+	Contact: SaitoWu@gmail.com
+	Twitter: @SaitoWu
+	From: HangZhou, China
 
 /* THANKS */
-	lindsayisgod
+	Tunghsiao Liu
 
 /* SITE */
 	Last update: {{ site.time | date: "%Y/%m/%d" }}
 	Language: English / Chinese / Japanese
-	Software: Textmate
+	Software: Gedit
 
 /* humanstxt.org */
+

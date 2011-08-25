@@ -1,1 +1,2 @@
-Sitemap: http://sparanoid.com/sitemap.xml
+Sitemap: http://saitowu.github.com/sitemap.xml
+
