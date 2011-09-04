@@ -31,7 +31,7 @@ Liquid template是一个出色的模版引擎,除了能渲染模版外还支持�
   
 由于octopress是基于Jekyll的,所以也只支持Liquid template.
   
-ps: Liquid 的风格是<% %>做条件语句,双{}做代入(类似mustache).html原生标签不能简写.
+ps: Liquid 的风格是<% %>做条件语句,{{ "{{ " }}}}做代入(类似mustache).html原生标签不能简写.
 
 ### Jekyll怎么改进?
 
@@ -49,11 +49,11 @@ or
     
 第二种方式的变种:
 
-    Tilt::LiquidTemplate.new { "hi Saito" }.render
+    Tilt::LiquidTemplate.new { "hi {{ "{{" }} name }}" }.render 'name'=>'Saito'
   
 好吧,我们即将使用第二种方式来改进Jekyll.至少将interface变成tilt调用,而非直接使用:
    
-    Liquid::Template.parse( "hi Saito" ).render
+    Liquid::Template.parse( "hi {{ "{{" }} name }}" ).render 'name'=>'Saito'
   
 这种差距是显而易见的,这样我想起了slf4j.我相信tilt的作者是被slf4j折磨过的. = =
   
