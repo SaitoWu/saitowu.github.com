@@ -2,7 +2,7 @@
 layout: post
 title: JRuby with Maven3
 category: note
-excerpt: Port ur java programs to jruby with maven3
+excerpt: Port your java programs to jruby with maven3
 ---
 
 ### 预备条件:
