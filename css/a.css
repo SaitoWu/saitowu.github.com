@@ -19,7 +19,7 @@
 	background: #fff;
 /*	background: #000;*/
 	font-size: 14px;
-	font-family: Georgia, 'Hiragino Mincho Pro', serif;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	line-height: 1.7;
 	max-width: 960px;
 	margin: 0 auto;
@@ -151,7 +151,7 @@ article abbr:after {
 }
 
 article code, article pre {
-	font-family: Menlo, Consolas, monospace;
+	font-family: Monaco, Menlo, Consolas, monospace;
 	color: #b74;
 }
 
