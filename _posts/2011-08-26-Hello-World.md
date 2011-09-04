@@ -6,6 +6,6 @@ excerpt: It's me
 ---
 
 <div class=txt>
-<p>Yes, it's me.</p>
+<p>Yes, it's not me.</p>
 </div>
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: JRuby + Maven3
+title: JRuby with Maven3
 category: note
-excerpt: hello world
+excerpt: Port ur java programs to jruby with maven3
 ---
 
 ### 预备条件:
 
-`jruby 1.6+`
+`jruby 1.6.0+`
 
 `maven 3`
 
