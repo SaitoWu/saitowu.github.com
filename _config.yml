@@ -7,7 +7,7 @@ permalink: /:categories/:title
 markdown: rdiscount
 
 # site url
-url: saitowu.github.com
+url: saito.im
 
 # Focus domain name to site.url, used for CloudFront production only
 # prod: true
