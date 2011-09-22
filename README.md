@@ -1,12 +1,9 @@
-NITE
+Note
 ====
 
-[Jekyll][jk] runing on [sparanoid.com][sp], Codename NITE, version 17.
+this is a personal blog.
 
-License
--------
+Author
+======
 
-See LICENSE.
-
-[jk]: https://github.com/mojombo/jekyll
-[sp]: http://sparanoid.com/
+Saito saitowu@gmail.com
