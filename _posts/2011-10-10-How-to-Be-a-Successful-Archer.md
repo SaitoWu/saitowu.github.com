@@ -11,7 +11,7 @@ excerpt: em..must install archlinux first!
 
 三个条件:
 
-Binray based : 没那么多时间等编译.
+Binary based : 没那么多时间等编译.
 
 Rolling relese : 免去半年重装的尴尬.
 
