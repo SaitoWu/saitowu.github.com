@@ -43,7 +43,9 @@ a:hover, .pl li a:hover {
   -webkit-transition: color .15s linear;
   transition: color .15s linear;
 }
-
+a.nav {
+  font-size: 13px;
+}
 ins {
 	color: #385A7A;
 	font-weight: bold;

@@ -33,15 +33,16 @@
 
 {% if page.category == "work" or page.category == "note" %}
 <nav>
-{% if page.next.url %}
-	<p><a href={% if site.prod %}//{{ site.url }}{% endif %}{{ page.next.url }}/>{{ page.next.title }}</a> |
-{% else %}
-	<p>You're viewing the latest post |
-{% endif %}
 {% if page.previous.url %}
-	Previous: <a href={% if site.prod %}//{{ site.url }}{% endif %}{{ page.previous.url }}/>{{ page.previous.title }}</a> &gt;</p>
+	<p> &lt;Previous: <a class="nav" href={% if site.prod %}//{{ site.url }}{% endif %}{{ page.previous.url }}/>{{ page.previous.title }}</a>
 {% else %}
-	You're reading my first post</p>
+	<p>You're reading my first post
+{% endif %}
+:Previous | Next:
+{% if page.next.url %}
+	<a class="nav" href={% if site.prod %}//{{ site.url }}{% endif %}{{ page.next.url }}/>{{ page.next.title }}</a> &gt;</p>
+{% else %}
+	You're viewing the latest post</p>
 {% endif %}
 </nav>
 {% endif %}
