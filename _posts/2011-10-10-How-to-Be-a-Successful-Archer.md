@@ -30,7 +30,8 @@ Repository : 新版本的软件用不上的寂寞谁人知.
 
 安装gnome 3.2:
     pacman -Syu
-    pacman -S xorg-xinit xorg-server xf86-video-ati #=> or xf86-video-nv
+    # or xf86-video-nv
+    pacman -S xorg-xinit xorg-server xf86-video-ati
     pacman -S gnome gnome-extra
     
 修改/etc/rc.conf:
@@ -38,7 +39,8 @@ Repository : 新版本的软件用不上的寂寞谁人知.
     MODULES=(fuse)
 
 修改/etc/inittab:
-    id:5initdefault:#=>同类型只保证这一个打开,下同
+    # 同类型只保证这一个打开,下同
+    id:5:initdefault:
     x:5:respawn:/user/sbin/gdm -nodaemon
 
 新建用户:
@@ -65,7 +67,8 @@ ibus(开机启动项添加ibus-deamon):
 
 wireless(b43系列):
     pacman -R broadcom-wl
-    yaourt b43-firmware (#rc.conf添加: DEAMONS(... b43 ...) 确保没有wl)
+    yaourt b43-firmware
+    #rc.conf添加: DEAMONS(... b43 ...) 确保没有wl
 
 ### 字体设置:
 
