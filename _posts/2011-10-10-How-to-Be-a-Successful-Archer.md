@@ -12,7 +12,9 @@ excerpt: em..must install archlinux first!
 三个条件:
 
 Binray based : 没那么多时间等编译.
+
 Rolling relese : 免去半年重装的尴尬.
+
 Repository : 新版本的软件用不上的寂寞谁人知.
 
 ### 开始安装:
