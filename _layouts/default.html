@@ -34,7 +34,7 @@
 {% if page.category == "work" or page.category == "note" %}
 <nav>
 {% if page.previous.url %}
-	<p> &lt;Previous: <a class="nav" href={% if site.prod %}//{{ site.url }}{% endif %}{{ page.previous.url }}/>{{ page.previous.title }}</a>
+	<p><a class="nav" href={% if site.prod %}//{{ site.url }}{% endif %}{{ page.previous.url }}/>{{ page.previous.title }}</a>
 {% else %}
 	<p>You're reading my first post
 {% endif %}
