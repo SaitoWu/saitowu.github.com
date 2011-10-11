@@ -75,8 +75,94 @@ wireless(b43系列):
 效果到现在仍然不是很理想:
 
 常用字体:
-    yaourt ttf-ms-fonts
-    pacman -S font-bh-ttf ttf-arphic-ukai ttf-arphic-uming ttf-bitstream-vera ttf-cheapskate ttf-dejavu ttf-fireflysung ttf-ms-fonts wqy-bitmapfont wqy-zenhei
+    yaourt -S wqy-microhei wqy-microhei-lite wqy-zenhei ttf-google-webfonts
+
+/etc/fonts/local.conf
+    <?xml version="1.0"?>
+    <!DOCTYPE fontconfig SYSTEM "fonts.dtd">
+    <fontconfig>
+    <!-- created by WenQuanYi FcDesigner v0.5 -->
+    <match>
+       <test name="family"><string>sans-serif</string></test>
+       <edit name="family" mode="prepend" binding="strong">
+          <string>Droid Sans</string>
+          <string>WenQuanYi Micro Hei Light</string>
+          <string>文泉驿微米黑</string>
+          <string>WenQuanYi Zen Hei</string>
+       </edit>
+    </match>
+    <match>
+       <test name="family"><string>serif</string></test>
+       <edit name="family" mode="prepend" binding="strong">
+          <string>Droid Serif</string>
+          <string>Cardo</string>
+          <string>文泉驿正黑</string>
+          <string>WenQuanYi Zen Hei</string>
+          <string>宋体</string>
+       </edit>
+    </match>
+    <match>
+       <test name="family"><string>monospace</string></test>
+       <edit name="family" mode="prepend" binding="strong">
+          <string>Droid Sans Mono</string>
+          <string>Inconsolata</string>
+          <string>WenQuanYi Micro Hei Mono Light</string>
+          <string>文泉驿等宽微米黑</string>
+          <string>WenQuanYi Zen Hei Mono</string>
+       </edit>
+    </match>
+    <match target="font">
+      <edit name="embeddedbitmap">
+        <bool>false</bool>
+      </edit>
+      <edit name="autohint">
+        <bool>true</bool>
+      </edit>
+    </match>
+    <match target="pattern">
+       <test name="weight" compare="more">
+          <const>medium</const>
+       </test>
+       <test name="family" compare="eq">
+          <string>WenQuanYi Micro Hei Light</string>
+       </test>
+       <edit name="family" mode="assign">
+          <string>WenQuanYi Micro Hei</string>
+       </edit>
+    </match>
+    </fontconfig>
+
+.fonts.conf
+    <?xml version='1.0'?>
+    <!DOCTYPE fontconfig SYSTEM 'fonts.dtd'>
+    <fontconfig>
+    <match target="font">
+      <edit mode="assign" name="rgba">
+       <const>rgb</const>
+      </edit>
+    </match>
+    <match target="font">
+      <edit mode="assign" name="hinting">
+       <bool>true</bool>
+      </edit>
+    </match>
+    <match target="font">
+      <edit mode="assign" name="hintstyle">
+       <const>hintmedium</const>
+      </edit>
+    </match>
+    <match target="font">
+      <edit mode="assign" name="lcdfilter">
+       <const>lcddefault</const>
+      </edit>
+    </match>
+    <dir>~/.fonts</dir>
+    <match target="font">
+      <edit mode="assign" name="antialias">
+       <bool>true</bool>
+      </edit>
+    </match>
+    </fontconfig>
 
 打过ubuntu补丁的渲染:
     yaourt -S cairo-ubuntu libxft-ubuntu freetype2-ubuntu fontconfig-ubuntu
