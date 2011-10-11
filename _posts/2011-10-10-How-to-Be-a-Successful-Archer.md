@@ -70,9 +70,11 @@ wireless(b43系列):
     yaourt b43-firmware
     #rc.conf添加: DEAMONS(... b43 ...) 确保没有wl
 
-### 字体设置:
+alsa:
+    pacman -S alsa-utils
+    #rc.conf添加: DEAMONS(... alsa ...) 这样声音配置才可以保存
 
-效果到现在仍然不是很理想:
+### 字体设置:
 
 常用字体:
     yaourt -S wqy-microhei wqy-microhei-lite wqy-zenhei ttf-google-webfonts
@@ -132,7 +134,7 @@ wireless(b43系列):
     </match>
     </fontconfig>
 
-.fonts.conf
+~/.fonts.conf
     <?xml version='1.0'?>
     <!DOCTYPE fontconfig SYSTEM 'fonts.dtd'>
     <fontconfig>
@@ -180,9 +182,6 @@ wireless(b43系列):
 
 Gnome 3.2 登陆界面 单击用户头像后假死:
     直接登陆,跳过密码输入阶段后解决
-
-Gnome 3.2 音量控制每次重新开机后都为mute状态:
-    暂时未解决.
 
 Gedit 的 Gmate插件集不能用了:
     转战vim.
