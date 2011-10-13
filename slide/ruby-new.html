@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->  <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	
+	<title>Ruby.new</title>
+	
+	<meta name="author" content="Saito">
+	<meta name="viewport" content="width=1024, user-scalable=no">
+	
+	<!-- Core and extension CSS files -->
+	<link rel="stylesheet" href="../public/deck/core/deck.core.css">
+	<link rel="stylesheet" href="../public/deck/extensions/goto/deck.goto.css">
+	<link rel="stylesheet" href="../public/deck/extensions/menu/deck.menu.css">
+	<link rel="stylesheet" href="../public/deck/extensions/navigation/deck.navigation.css">
+	<link rel="stylesheet" href="../public/deck/extensions/status/deck.status.css">
+	<link rel="stylesheet" href="../public/deck/extensions/hash/deck.hash.css">
+	
+	<!-- Theme CSS files (menu swaps these out) -->
+	<link rel="stylesheet" id="style-theme-link" href="../public/deck/themes/style/swiss.css">
+	<link rel="stylesheet" id="transition-theme-link" href="../public/deck/themes/transition/horizontal-slide.css">
+	
+	
+	<script src="../public/deck/modernizr.custom.js"></script>
+</head>
+
+<body class="deck-container">
+
+<section class="slide" id="title-slide">
+	<h1>Ruby.new</h1>
+</section>
+
+<section class="slide" id="Hello World">
+	<h2>#=> Hello World</h2>
+	<ul>
+		<li class="slide">
+			<h3>标准版:</h3>
+		</li>
+		<li class="slide">
+			<pre><code>print "hello world!"</code></pre>
+		</li>
+		<li class="slide">
+			<h3>太长了:</h3>
+		</li>
+		<li class="slide">
+			<pre><code>puts "hello world!"</code></pre>
+		</li>
+		<li class="slide">
+			<h3>再短一点:</h3>
+		</li>
+		<li class="slide">
+			<pre><code>p "hello world!"</code></pre>
+		</li>
+	</ul>
+</section>
+
+<section class="slide" id="comment">
+	<h2>#=> Comment</h2>
+	<ul>
+	<li class="slide">
+		<pre><code># say hello</code></pre>
+	</li>
+	<li class="slide">
+	<pre>
+		<code>
+=begin
+  this is a long comment
+=end
+	  </code>
+	</pre>
+	</li>
+	</ul>
+</section>
+
+<section class="slide" id="varibale">
+	<h2>#=> variables</h2>
+	<ul>
+	<li class="slide">
+		<pre><code>local: time or _time</code></pre>
+	</li>
+	<li class="slide">
+		<pre><code>instance: @time</code></pre>
+	</li>
+	<li class="slide">
+		<pre><code>class: @@time</code></pre>
+	</li>
+	<li class="slide">
+		<pre><code>global $time</code></pre>
+	</li>
+	</ul>
+</section>
+
+<section class="slide" id="varibale-types">
+	<h2>#=> data types</h2>
+	<ul>
+	<li class="slide">
+<pre><code>Numeric</code></pre>
+<pre><code>String</code></pre>
+<pre><code>Symbol</code></pre>
+<pre><code>Boolean</code></pre>
+<pre><code>Array</code></pre>
+<pre><code>Hash</code></pre>
+	</li>
+	</ul>
+</section>
+
+<section class="slide" id="varibale-tricks">
+	<h2>#=> variables tricks</h2>
+	<ul>
+	<li class="slide">
+		<pre><code>"hello #{name}"</code></pre>
+	</li>
+		<li class="slide">
+		<pre><code>a,b = b,a</code></pre>
+	</li>
+		<li class="slide">
+		<pre><code>3.times{ puts "hello"}</code></pre>
+	</li>
+		<li class="slide">
+		<pre><code>"hello" * 3</code></pre>
+	</li>
+	</ul>
+</section>
+
+<section class="slide" id="condition-if">
+	<h2>#=> condition if</h2>
+	<ul>
+	<li class="slide">
+		<h3>质樸的if:</h3>
+	</li>
+	<li class="slide">
+		<pre><code>
+if(a>5)
+  puts a
+end</code></pre>
+	</li>
+  <li class="slide">
+		<h3>一行版:</h3>
+	</li>
+	<li class="slide">
+	  <pre><code>if a > 5 then puts a end</code></pre>
+	</li>
+	<li class="slide">
+		<h3>语义不够顺畅:</h3>
+	</li>
+	<li class="slide">
+	  <pre><code>puts a if a > 5</code></pre>
+	</li>
+	</ul>
+</section>
+
+<section class="slide" id="condition-unless">
+  <h2>#=> condition unless</h2>
+  <ul>
+	<li class="slide">
+		<h3>与if语义相反的unless</h3>
+	</li>
+	<li class="slide">
+		<pre><code>puts "miss it" if !name</code></pre>
+		<pre><code>puts "miss it" unless name</code></pre>
+	</li>
+	<li class="slide">
+		<h3>三元不能少:</h3>
+	</li>
+	<li class="slide">
+		<pre><code>a > 5 ? puts(a) : "oh no"</code></pre>
+	</li>
+	</ul>
+</section>
+
+<section class="slide" id="condition-if-else">
+  <h2>#=> condition if else</h2>
+  <ul>
+  <li class="slide">
+		<h3>if elsif else:</h3>
+	</li>
+	<li class="slide">
+		<pre><code>
+if name == "jack"
+  "i am rose"
+elsif name == "rose"
+  "jack i miss u"
+else
+  "get out from here"
+end
+  </code></pre>
+	</li>
+	<li class="slide">
+		<h3>这个肯定是switch的场景啊:</h3>
+	</li>
+	<li class="slide">
+	  <pre><code>
+case name
+when "jack" then "i am rose"
+when "rose" then "jack i miss u"
+else "get out from here"
+end
+  </code></pre>
+	</li>
+	</ul>
+</section>
+
+<section class="slide" id="loop">
+  <h2>#=> loop</h2>
+  <ul>
+  <li class="slide">
+		<h3>循环怎么写:</h3>
+	</li>
+	<li class="slide">
+		<pre><code>3.times{ puts "hello world" }</code></pre>
+	</li>
+  <li class="slide">
+		<h3>for呢:</h3>
+	</li>
+	<li class="slide">
+		<pre><code>
+for x in [1,2,3]
+  puts x
+end
+		</code></pre>
+	</li>
+  </ul>
+</section>
+
+<section class="slide" id="while">
+  <h2>#=> loop</h2>
+  <ul>
+  <li class="slide">
+		<h3>while:</h3>
+	</li>
+	<li class="slide">
+		<pre><code>
+while i > 5 do
+  i -= 1
+end
+i -= 1 while i > 5
+		</code></pre>
+	</li>
+  <li class="slide">
+		<h3>while的好兄弟until:</h3>
+	</li>
+	<li class="slide">
+		<pre><code>
+until i <= 5 do
+  i -= 1
+end
+i -= 1 until i<= 5
+		</code></pre>
+	</li>
+  </ul>
+</section>
+
+<section class="slide" id="loop-break">
+  <h2>#=> loop</h2>
+  <ul>
+  <li class="slide">
+		<h3>while true太不洋气了:</h3>
+	</li>
+  <li class="slide">
+		<pre><code>
+loop do
+  puts "我自豪"
+end
+		</code></pre>
+	</li>
+	<li class="slide">
+		<h3>打断罪恶的连锁:</h3>
+	</li>
+	<li class="slide">
+		<pre><code>break</code></pre>
+		<pre><code>next</code></pre>
+		<pre><code>redo</code></pre>
+		<pre><code>retry</code></pre>
+	</li>
+	</ul>
+</section>
+
+<section class="slide" id="method">
+  <h2>#=> method</h2>
+  <ul>
+	<li class="slide">
+		<h3>质樸版:</h3>
+	</li>
+	<li class="slide">
+		<pre><code>
+def plus(x,y)
+  z = x + y
+  return z
+end
+plus(3, 4)
+    </code></pre>
+	</li>
+	<li class="slide">
+		<h3>一步到位的:</h3>
+	</li>
+	<li class="slide">
+		<pre><code>
+def plus x,y
+  x+y
+end
+plus 3,4
+    </code></pre>
+	</li>
+	<li class="slide">
+		<h3>只有overriding没有overloading</h3>
+	</li>
+	</ul>
+</section>
+
+<section class="slide" id="block">
+  <h2>#=> block</h2>
+  <ul>
+	<li class="slide">
+		<h3>制造一个带有block的method:</h3>
+	</li>
+	<li class="slide">
+		<pre><code>
+def hello
+  yield
+end
+
+hello {puts "hello, block"}
+    </code></pre>
+	</li>
+	<li class="slide">
+		<h3>显式的告诉你这是怎么一回事(并不完全相同:</h3>
+	</li>
+	<li class="slide">
+		<pre><code>
+def hello &block
+  block.call
+end
+
+hello {puts "hello, block"}
+    </code></pre>
+	</li>
+	</ul>
+</section>
+
+<section class="slide" id="lambda-proc">
+  <h2>#=> lambda and block</h2>
+  <ul>
+	<li class="slide">
+		<h3>lambda 和 Proc:</h3>
+	</li>
+	<li class="slide">
+<pre><code>lambda{}</code></pre>
+<pre><code>Proc.new{}</code></pre>
+	</li>
+	<li class="slide">
+		<h3>lambda和Proc的一点点区别:</h3>
+	</li>
+	<li class="slide">
+<pre><code>Proc中return会跳出当前作用域</code></pre>
+<pre><code>lambda中return不会当前整个作用域</code></pre>
+	</li>
+	</ul>
+</section>
+
+<section class="slide" id="block-example">
+  <h2>#=> block example</h2>
+  <ul>
+	<li class="slide">
+		<h3>一些常用的block的例子:</h3>
+	</li>
+	<li class="slide">
+<pre><code>[1,2,3,4,5].each{|i| puts i}</code></pre>
+<pre><code>[1,2,3,4,5].each_with_index{|i, index| puts i, index}</code></pre>
+<pre><code>[1,2,3,4,5].map{|i| i**2 }</code></pre>
+<pre><code>[1,2,3,4,5].select{|i| i%2==0 }</code></pre>
+<pre><code>[1,2,3,4,5].reject{|i| i%2==0 }</code></pre>
+<pre><code>[1,2,3,4,5].inject{|sum, i| sum += i}</code></pre>
+	</li>
+	</ul>
+</section>
+
+<section class="slide" id="class">
+  <h2>#=> class</h2>
+  <ul>
+	<li class="slide">
+		<h3>正常的class实现:</h3>
+	</li>
+	<li class="slide">
+		<pre><code>
+class Bird
+  attr_accessor :name, :sex
+  def initialize name
+    @name = name
+  end
+  
+  def self.fly
+    puts "bird can fly"
+  end
+  
+  def say
+    puts "i am #{@name}"
+  end
+end
+
+bird = Bird.new("didi")
+bird.sex = "male"
+Bird.fly
+    </code></pre>
+	</li>
+	</ul>
+</section>
+
+<section class="slide" id="class-more">
+  <h2>#=> class more</h2>
+  <ul>
+	<li class="slide">
+		<h3>继承怎么实现:</h3>
+	</li>
+	<li class="slide">
+		<pre><code>
+class LittleBird < Bird
+  def initialize name
+    super(name)
+  end
+end
+    </code></pre>
+	</li>
+	<li class="slide">
+		<h3>特殊属性访问控制:</h3>
+	</li>
+	<li class="slide">
+		<pre><code>
+attr_reader :name
+attr_writer :sex
+    </code></pre>
+	</li>
+	</ul>
+</section>
+
+<section class="slide" id="module">
+  <h2>#=> module</h2>
+  <ul>
+  <li class="slide">
+		<h3>interface怎么写:</h3>
+	</li>
+	<li class="slide">
+		<pre><code>
+ruby没有interface,只有比interface更强大的module与mixin机制
+    </code></pre>
+	</li>
+	</ul>
+</section>
+
+<section class="slide" id="module-interface">
+  <h2>#=> module</h2>
+  <ul>
+	<li class="slide">
+		<h3>"有逻辑实现的interface":</h3>
+	</li>
+	<li class="slide">
+		<pre><code>
+module Eat
+  def eat
+    p "i can eat"
+  end
+end
+
+module Sleep
+  def sleep
+    p "i can sleep"
+  end
+end
+
+class Pig
+  include Eat
+  include Sleep
+end
+
+Pig.new.eat
+Pig.new.sleep
+    </code></pre>
+	</li>
+	</ul>
+</section>
+
+<section class="slide" id="module-variable">
+  <h2>#=> module variable</h2>
+  <ul>
+	<li class="slide">
+		<h3>module variable访问:</h3>
+	</li>
+	<li class="slide">
+		<pre><code>
+module Math
+  PI = 3.14
+end
+
+Math::PI
+    </code></pre>
+	</li>
+	</ul>
+</section>
+
+<section class="slide" id="module-module">
+  <h2>#=> module more</h2>
+  <ul>
+	<li class="slide">
+		<h3>module include module:</h3>
+	</li>
+	<li class="slide">
+		<pre><code>
+module Foo
+  module Bar
+    def self.say
+      p "Hi"
+    end
+  end
+end
+
+Foo::Bar.say
+    </code></pre>
+  </li>
+	</ul>
+</section>
+
+<section class="slide" id="module-class">
+  <h2>#=> module more</h2>
+  <ul>
+	<li class="slide">
+		<h3>module include class:</h3>
+	</li>
+	<li class="slide">
+		<pre><code>
+module Foo
+  class Bar
+    def say
+      p "Hi"
+    end
+  end
+end
+
+Foo::Bar.new.say
+    </code></pre>
+	</li>
+	</ul>
+</section>
+
+<section class="slide" id="module-singleton">
+  <h2>#=> module singleton</h2>
+  <ul>
+	<li class="slide">
+		<h3>module的特殊用法singleton:</h3>
+	</li>
+	<li class="slide">
+		<pre><code>
+module Item
+  extend self
+  
+  def name
+    p "i'm item"
+  end
+end
+
+Item.name
+    </code></pre>
+	</li>
+	</ul>
+</section>
+
+<section class="slide" id="ruby-more">
+  <h2>#=> ruby more</h2>
+  <ul>
+	<li class="slide">
+		<h3>monkey patch:</h3>
+	</li>
+	<li class="slide">
+		<pre><code>
+class Fixnum
+  def plus n
+    self + n
+  end
+end
+
+1.plus 3
+    </code></pre>
+	</li>
+	<li class="slide">
+		<h3>and more...</h3>
+	</li>
+	</ul>
+</section>
+
+<section class="slide" id="more">
+  <h2>#=> more</h2>
+  <ul>
+	<li class="slide">
+		<h3>更多:</h3>
+	</li>
+	<li class="slide">
+<pre><code>[Fiber](https://gist.github.com/1050566)</code></pre>
+<pre><code>[Class](https://gist.github.com/872171)</code></pre>
+<pre><code>[System](https://gist.github.com/822091)</code></pre>
+<pre><code>[Proc](https://gist.github.com/874438)</code></pre>
+	</li>
+	</ul>
+</section>
+
+<section class="slide" id="more">
+  <h1>puts "Thx"</h1>
+</section>
+
+<p class="deck-status">
+	<span class="deck-status-current"></span>
+	/
+	<span class="deck-status-total"></span>
+</p>
+
+<form action="." method="get" class="goto-form">
+	<label for="goto-slide">Go to slide:</label>
+	<input type="number" name="slidenum" id="goto-slide">
+	<input type="submit" value="Go">
+</form>
+
+<a href="." title="Permalink to this slide" class="deck-permalink">#</a>
+
+
+  <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="../jquery-1.6.4.min.js"><\/script>')</script>
+
+<!-- Deck Core and extensions -->
+<script src="../public/deck/core/deck.core.js"></script>
+<script src="../public/deck/extensions/menu/deck.menu.js"></script>
+<script src="../public/deck/extensions/goto/deck.goto.js"></script>
+<script src="../public/deck/extensions/status/deck.status.js"></script>
+<script src="../public/deck/extensions/navigation/deck.navigation.js"></script>
+<script src="../public/deck/extensions/hash/deck.hash.js"></script>
+
+<script>
+	$(function() {
+		$.deck('.slide');
+	});
+</script>
+
+</body>
+</html>
