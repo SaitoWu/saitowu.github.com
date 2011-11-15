@@ -33,7 +33,7 @@ Repository : 新版本的软件用不上的寂寞谁人知.
     # or xf86-video-nv
     pacman -S xorg-xinit xorg-server xf86-video-ati
     pacman -S gnome gnome-extra
-    
+
 修改/etc/rc.conf:
     DAEMONS=(... dbus ... gdm @networkmanager)
     MODULES=(fuse)
@@ -87,6 +87,7 @@ alsa:
     <match>
        <test name="family"><string>sans-serif</string></test>
        <edit name="family" mode="prepend" binding="strong">
+          <string>Arial</string>
           <string>Droid Sans</string>
           <string>WenQuanYi Micro Hei Light</string>
           <string>文泉驿微米黑</string>
@@ -123,7 +124,7 @@ alsa:
     </match>
     <match target="pattern">
        <test name="weight" compare="more">
-          <const>medium</const>
+          <const>regular</const>
        </test>
        <test name="family" compare="eq">
           <string>WenQuanYi Micro Hei Light</string>
@@ -150,7 +151,7 @@ alsa:
     </match>
     <match target="font">
       <edit mode="assign" name="hintstyle">
-       <const>hintmedium</const>
+       <const>hintslight</const>
       </edit>
     </match>
     <match target="font">
