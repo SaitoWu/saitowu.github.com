@@ -19,6 +19,10 @@ start sshd or maybe u need restart ur machine.
 
     sudo useradd -m -s /bin/bash git
 
+add git to visudo
+
+    git ALL=(ALL) NOPASSWD:ALL
+
 ### generate a ssh key
 
     sudo su git
