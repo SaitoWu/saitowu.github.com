@@ -100,3 +100,5 @@ gitosis-serve会利用正则截取用户要请求的repo,然后将用户标识�
 希望可以有pure ruby的gem,这样结合grit就可以做更多更方便的管理了.
 
 当然是对于rubyist来说..
+
+ssh真的是常挖常新...
