@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->  <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	
+	<title>Git Github & Gitlab</title>
+	
+	<meta name="author" content="Saito">
+	<meta name="viewport" content="width=1024, user-scalable=no">
+	
+	<!-- Core and extension CSS files -->
+	<link rel="stylesheet" href="../public/deck/core/deck.core.css">
+	<link rel="stylesheet" href="../public/deck/extensions/goto/deck.goto.css">
+	<link rel="stylesheet" href="../public/deck/extensions/menu/deck.menu.css">
+	<link rel="stylesheet" href="../public/deck/extensions/navigation/deck.navigation.css">
+	<link rel="stylesheet" href="../public/deck/extensions/status/deck.status.css">
+	<link rel="stylesheet" href="../public/deck/extensions/hash/deck.hash.css">
+	
+	<!-- Theme CSS files (menu swaps these out) -->
+	<link rel="stylesheet" id="style-theme-link" href="../public/deck/themes/style/neon.css">
+	<link rel="stylesheet" id="transition-theme-link" href="../public/deck/themes/transition/horizontal-slide.css">
+	
+	
+	<script src="../public/deck/modernizr.custom.js"></script>
+</head>
+
+<body class="deck-container">
+
+<section class="slide" id="title-slide">
+	<h1>Git Github & Gitlab</h1>
+</section>
+
+<section class="slide" id="who-am-i">
+	<h2>who am i</h2>
+	<ul>
+		<li class="slide">
+			<h3>Saito</h3>
+		</li>
+		<li class="slide">
+			<h3>@SaitoWu</h3>
+		</li>
+		<li class="slide">
+			<h3>http://saito.im</h3>
+		</li>
+	</ul>
+</section>
+
+<section class="slide" id="agenda">
+	<h2>Agnda</h2>
+	<ul>
+		<li class="slide">
+			<h3>Git原理</h3>
+		</li>
+		<li class="slide">
+			<h3>Github闲聊</h3>
+		</li>
+		<li class="slide">
+			<h3>Gitlab实作</h3>
+		</li>
+	</ul>
+</section>
+
+<section class="slide" id="dvcs-vs-cvcs">
+	<h2>DVCS & CVCS</h2>
+	<ul>
+		<li class="slide">
+			<h3>C vs D</h3>
+		</li>
+	</ul>
+</section>
+
+<section class="slide" id="git-vs-svn">
+	<h2>Why Git is better than SVN</h2>
+	<ul>
+		<li class="slide">
+			<h3>本地版本管理</h3>
+		</li>
+		<li class="slide">
+			<h3>没有lock folder的烦恼</h3>
+		</li>
+		<li class="slide">
+			<h3>不污染子目录的track文件</h3>
+		</li>
+		<li class="slide">
+			<h3>超轻量级的branch</h3>
+		</li>
+		<li class="slide">
+			<h3>强力的merge</h3>
+		</li>
+		<li class="slide">
+			<h3>神奇的git gc</h3>
+		</li>
+		<li class="slide">
+			<h3>清爽实用的command line</h3>
+		</li>
+		<li class="slide">
+			<h3>...</h3>
+		</li>
+	</ul>
+</section>
+
+<section class="slide" id="git-vs-hg">
+	<h2>HG vs Git</h2>
+	<ul>
+		<li class="slide">
+			<h3>Python vs c</h3>
+		</li>
+		<li class="slide">
+			<h3>delta vs snapshot</h3>
+		</li>
+		<li class="slide">
+			<h3>git gc</h3>
+		</li>
+		<li class="slide">
+			<h3>各有各的好处.(但我还是用git ;p)</h3>
+		</li>
+	</ul>
+</section>
+
+<section class="slide" id="git-protocol">
+	<h2>Git的四种protocol</h2>
+	<ul>
+		<li class="slide">
+			<h3>file [rw]</h3>
+		</li>
+		<li class="slide">
+			<h3>https [r]</h3>
+		</li>
+		<li class="slide">
+			<h3>git [r]</h3>
+		</li>
+		<li class="slide">
+			<h3>ssh [rw]</h3>
+		</li>
+	</ul>
+</section>
+
+<section class="slide" id="gitconfig">
+	<h1><a href="https://github.com/SaitoWu/dotfiles/blob/master/gitconfig">.gitconfig</a></h1>
+</section>
+
+<section class="slide" id="dvcs-commit">
+	<h2>DVCS的两段提交</h2>
+<pre><code>touch readme.md
+
+# 添加代码至staging区域
+git add .
+
+# 查看repo状态
+git st
+
+# 本地提交文件
+git ci -am"add readme file"
+
+# 这里不是svn意义上的commit
+git up
+
+# 同步仓库与本地代码
+git pom
+</pre></code>
+</section>
+
+<section class="slide" id="git-as-svn">
+	<h1>Git as SVN</h1>
+</section>
+
+<section class="slide" id="git-pro">
+	<h2>稍微高端一点</h2>
+<pre><code># 暂存代码至暂存栈
+git stash
+
+# 从暂存栈pop
+git stash pop
+
+# 重置最新的commit
+git reset HEAD~1
+
+# 生成新的commit来revert上次操作
+git revert HEAD
+
+# 对未同步的代码做"变基" XD
+git rebase -i origin/master
+
+# "变基"失败可以忽略再来
+git rebase -i --abort
+
+# 神奇的ll
+git ll
+</pre></code>
+</section>
+
+<section class="slide" id="git-branch">
+	<h2>Git branch*</h2>
+<pre><code># 查看当前分支集
+git br
+
+# 创建bugfix分支
+git br bugfix
+
+# 切换或者创建bugfix分支
+git co -b bugfix
+
+# merge bugfix分支的代码
+git merge bugfix
+
+# 删除bugfix分支
+git br -D bugfix
+
+# 切换分支至master
+git co master
+</pre></code>
+</section>
+
+<section class="slide" id="git-best-practice">
+	<h2>谨记</h2>
+	<ul>
+		<li class="slide">
+			<h3>merge分支用--no-ff</h3>
+		</li>
+		<li class="slide">
+			<h3>git pull使用-rebase</h3>
+		</li>
+	</ul>
+</section>
+
+<section class="slide" id="git-flow">
+	<h1><a href="http://nvie.com/posts/a-successful-git-branching-model/">git</a> <a href="https://github.com/nvie/gitflow">flow</a></h1>
+</section>
+
+<section class="slide" id="github">
+	<h2>Github</h2>
+	<ul>
+		<li class="slide">
+			<h3>repo management</h3>
+		</li>
+		<li class="slide">
+			<h3>code view tree</h3>
+		</li>
+		<li class="slide">
+			<h3>code review</h3>
+		</li>
+		<li class="slide">
+			<h3>issue management</h3>
+		</li>
+		<li class="slide">
+			<h3>project wiki</h3>
+		</li>
+		<li class="slide">
+			<h3>service hook</h3>
+		</li>
+	</ul>
+</section>
+
+<section class="slide" id="github-resume">
+	<h1>Github is ur new résumé!</h1>
+</section>
+
+<section class="slide" id="github-too-expensive">
+	<h1>BUT! 20 seats $5000/year</h1>
+</section>
+
+<section class="slide" id="gitlab">
+	<h1>=> Gitlab <=</h1>
+</section>
+
+<section class="slide" id="gitlab-intro">
+	<h2>Gitlab</h2>
+	<ul>
+		<li class="slide">
+			<h3>为企业服务的开源项目</h3>
+		</li>
+		<li class="slide">
+			<h3>Rails 3</h3>
+		</li>
+		<li class="slide">
+			<h3>逐渐跟进Github的功能</h3>
+		</li>
+		<li class="slide">
+			<h3><a href="http://dev.gitlabhq.com">...</a></h3>
+		</li>
+	</ul>
+</section>
+
+<section class="slide" id="gitlabhq">
+	<h1><a href="https://github.com/gitlabhq/gitlabhq">有钱出钱,有力出力.</a></h1>
+</section>
+
+<section class="slide" id="q-and-a">
+	<h1>Q&A(提问的智慧 XD)</h1>
+</section>
+
+<section class="slide" id="thank-you">
+	<h1>Thx</h1>
+</section>
+
+<p class="deck-status">
+	<span class="deck-status-current"></span>
+	/
+	<span class="deck-status-total"></span>
+</p>
+
+<form action="." method="get" class="goto-form">
+	<label for="goto-slide">Go to slide:</label>
+	<input type="number" name="slidenum" id="goto-slide">
+	<input type="submit" value="Go">
+</form>
+
+<a href="." title="Permalink to this slide" class="deck-permalink">#</a>
+
+
+  <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="../jquery-1.6.4.min.js"><\/script>')</script>
+
+<!-- Deck Core and extensions -->
+<script src="../public/deck/core/deck.core.js"></script>
+<script src="../public/deck/extensions/menu/deck.menu.js"></script>
+<script src="../public/deck/extensions/goto/deck.goto.js"></script>
+<script src="../public/deck/extensions/status/deck.status.js"></script>
+<script src="../public/deck/extensions/navigation/deck.navigation.js"></script>
+<script src="../public/deck/extensions/hash/deck.hash.js"></script>
+
+<script>
+	$(function() {
+		$.deck('.slide');
+	});
+</script>
+
+</body>
+</html>
