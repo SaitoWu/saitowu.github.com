@@ -14,7 +14,7 @@ url: saito.im
 prod: true
 
 # used by images inserted in posts
-file: http://i.imgur.com/
+file: http://f.cl.ly/items
 
 # custom vars, most of them are used by index.xml
 name: Saito
