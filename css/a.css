@@ -189,6 +189,8 @@ article .download {
 	margin-top: 8px;
 }
 .al li {
+	margin: 8px;
+	box-shadow: 2px 2px 6px #888;
 	position: relative;
 	list-style: none;
 	display: inline-block;
