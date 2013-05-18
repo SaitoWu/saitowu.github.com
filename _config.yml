@@ -4,7 +4,11 @@ destination: ./_site
 
 # site settings
 permalink: /:categories/:title
-markdown: rdiscount
+markdown: redcarpet
+
+# markdown engine
+redcarpet:
+  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "lax_spacing", "strikethrough", "superscript"]
 
 # site url
 url: saito.im
@@ -24,14 +28,12 @@ slogan: worstest coder ever.
 twitter: SaitoWu
 
 # fire up a localhost and auto generate when files change
-auto: true
-server: ture
-server_port: 4321
+serve: ture
+port: 4321
 
 # exclude files for generated site
 exclude:
 - README.md
 - LICENSE
 - Rakefile
-- nite.tmproj
 
