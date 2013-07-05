@@ -29,7 +29,7 @@ Turbolinks 里面有用的功能, 不用几行就实现了, 而多余的很多�
 
 我个人很喜欢 yehuda 的 Ember.js 的宣传语, Ambitious Web Applications. 我觉得未来的体验需要有野心的前端框架来解决. 而不是 Turbolinks.
 
-### Sprockets 的出现是为了解决什么问题?
+### 而 Sprockets 的出现是为了解决什么问题?
 
 - 连接 ( 其他都是附带的.
 
