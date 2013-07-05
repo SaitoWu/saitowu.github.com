@@ -7,7 +7,7 @@ excerpt: also sprockets
 
 ### Turbolinks 的出现是为了解决什么问题?
 
-- 减少 HTTP 连接数.
+- 减少 Javascript 与 CSS 编译时间.
 
 ### 解决的同时送给你了什么新的礼物?
 
@@ -44,3 +44,9 @@ Turbolinks 里面有用的功能, 不用几行就实现了, 而多余的很多�
 所以 Sprockets 在现在的开发模式下, 有用的功能几乎为 0 . ( 不过在当时这些 模块定义 AMD/CMD 还没有被大家广泛接受的时候是有用的, 不过仅限于 Javascript.
 
 Sprockets 希望你将 Javascript lib 打包成 Gem 来做管理, 本来就是一个 Anti Pattern. 因为这与开发阶段完全脱离, 非常依赖第三方人员升级 Gem. lib 与 作者结合的发布方式才是对的. 例如 bower ( 方向对了, 但是实现的不好.
+
+### TIL
+
+感谢 [@Hooopo](https://twitter.com/Hooopo) 纠正关于 Turbolinks 与浏览器连接数的问题.
+
+Click links will not fire conditional GET, command + r will !
